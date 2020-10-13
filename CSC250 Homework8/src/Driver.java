@@ -16,8 +16,12 @@ public class Driver
 		{
 			System.out.println("No Book Found");
 		}
-		.sort
-		
+		BibleBook chapter=theNewTestament.sortOnChapterCount();
+		BibleBook name=theNewTestament.sortOnName();
+		while(theNewTestament.nextLine()) {
+			name.display();
+			chapter.display();
+		}
 		
 		
 	}

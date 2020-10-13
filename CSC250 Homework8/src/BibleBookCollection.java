@@ -49,16 +49,34 @@ public class BibleBookCollection
 	}
 	
 	public BibleBook sortOnName(){
-		for(BibleBook aBook : this.theBooks) {
-			
-		}
-		
+		int n=this.theBooks.size();
+		private arrayList[] letters= {1,2,3,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
+		  for (int i = 0; i < n-1; i++) 
+	            for (int j = 0; j < n-i-1; j++) 
+	                if (BibleBook(this.theBooks[j]).getName.charAt(0).compareTo(BibleBook(this.theBooks[j+1]).getName.charAt(0)) != 0)
+	                { 
+	                    String temp = this.theBooks[j]; 
+	                    this.theBooks[j] = this.theBooks[j+1]; 
+	                    this.theBooks[j+1] = temp; 
+	                } 
+	        return this.theBooks;
+	
 	}
 	
-	public BibleBook sortOnChapterCount(){
-		for(BibleBook aBook : this.theBooks) {
-			
-		}
+	public BibleBook sortOnChapterCount() {
+		 int n = this.theBooks.size();
+	        for (int i = 0; i < n-1; i++) 
+	            for (int j = 0; j < n-i-1; j++) 
+	                if (BibleBook(this.theBooks[j]).getNumber_of_chapters() > BibleBook(this.theBooks[j+1]).getNumber_of_chapters()) 
+	                {  
+	                    String temp = this.theBooks[j]; 
+	                    this.theBooks[j] = this.theBooks[j+1]; 
+	                    this.theBooks[j+1] = temp; 
+	                } 
+	        return this.theBooks;
+	      
+		
+		//return theBooks
 		
 	}
 }
